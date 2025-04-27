@@ -18,6 +18,7 @@ void TestSimpleConstructor(){
 void TestConstructor(){
 	cout << "Testing Constructor W/Int Input..." << endl;
 	RedBlackTree rbt = RedBlackTree(15);
+	cout << rbt.ToPrefixString() << endl;
 	assert(rbt.ToPrefixString() == " B15 ");
 
 	cout << "PASSED!"<< endl << endl;
@@ -186,6 +187,9 @@ void TestCopyConstructor(){
 
 	RedBlackTree rbt2 = RedBlackTree(rbt1);
 
+	cout << rbt1.ToPrefixString() << endl;
+	cout << rbt2.ToPrefixString() << endl; 
+	
 	assert(rbt2.ToPrefixString() == rbt1.ToPrefixString());
 
 	rbt1.Insert(200);
